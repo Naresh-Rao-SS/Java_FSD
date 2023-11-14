@@ -32,8 +32,8 @@ public class Logout extends HttpServlet {
 		PrintWriter pw=response.getWriter();
 		RequestDispatcher rd=request.getRequestDispatcher("index.html");
 		rd.include(request, response);	
-		Cookie c=new Cookie("userid","");
-		c.setMaxAge(0);
+		Cookie c=new Cookie("id","");
+		c.setMaxAge(10);
 		response.addCookie(c);
 		pw.print("logged out ..");
 

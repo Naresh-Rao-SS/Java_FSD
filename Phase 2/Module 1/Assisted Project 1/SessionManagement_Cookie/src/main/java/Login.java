@@ -15,14 +15,14 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class Login extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public Login() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
+
+	/**
+	 * @see HttpServlet#HttpServlet()
+	 */
+	public Login() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
@@ -42,10 +42,9 @@ public class Login extends HttpServlet {
 		String user=request.getParameter("user");
 		String password=request.getParameter("pwd");
 		if(user.equals(password)) {
-			Cookie c=new Cookie("userid",user);
+			Cookie c=new Cookie("id",user);
 			response.addCookie(c);
-			pw.print("login is successfull");
-			
+			pw.print("login is successfull");	
 		}
 		else {
 			pw.print("login failed ");

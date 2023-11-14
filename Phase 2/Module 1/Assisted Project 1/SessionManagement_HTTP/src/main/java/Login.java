@@ -45,7 +45,6 @@ public class Login extends HttpServlet {
 			HttpSession session=request.getSession();
 			session.setAttribute("userid",user);
 			pw.print("login is successfull");
-			
 		}
 		else {
 			pw.print("login failed ");

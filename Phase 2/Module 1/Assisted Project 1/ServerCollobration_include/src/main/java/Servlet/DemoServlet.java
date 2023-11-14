@@ -44,7 +44,6 @@ public class DemoServlet extends HttpServlet {
 		//when we include a physical response with the virtual response it is considered as a text
 	    response.setContentType("text/html");
 		RequestDispatcher rd=request.getRequestDispatcher("success.html");
-	//	RequestDispatcher rd=request.getRequestDispatcher("User");
 		rd.include(request, response);
 
 	}
