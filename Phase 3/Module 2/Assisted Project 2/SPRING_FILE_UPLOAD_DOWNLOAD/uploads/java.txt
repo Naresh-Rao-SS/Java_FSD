@@ -1,0 +1,22 @@
+Java
+
+Method overloading
+
+class Calculator{
+	public int add(int n1, int n2, int n3)  --> 8
+	return n1 + n2 + n3;
+
+	public int add(int n1,int n2)           --> 7
+	return n1+ n2;
+
+	public double add(double n1,int n2)     --> 14.5
+	return n1 + n2;
+	}
+
+main
+
+
+add (1,3,4)
+add (2,5)
+add (6.5,8)
+
