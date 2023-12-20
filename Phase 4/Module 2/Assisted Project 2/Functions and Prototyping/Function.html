@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+</head>
+<body>
+    <h1>This is A Function</h1>
+
+    <div id="output"></div>
+
+    <script>
+        function addnum(num1,num2){
+            return num1+num2;
+        }
+        var addresult=addnum(5,2);
+        console.log(addresult);
+
+        function saywelcome(name){
+            return "Yo "+name;
+        }
+        var welcomeresult=saywelcome("Naresh Rao ");
+        console.log(welcomeresult);
+
+
+        
+
+        window.onload=function(){
+            addnum();
+            saywelcome();
+
+            document.getElementById('output').innerHTML = '<p>' + 'The sum of 5 and 2 is: ' + addresult
+                + '<br/>' + 'Welcome message for Naresh is :'+ welcomeresult+'! </p>';
+        }
+    </script>
+</body>
+</html>

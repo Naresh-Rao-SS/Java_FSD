@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototyping-Function</title>
+</head>
+
+<body>
+    <h1>Prototyping Example</h1>
+
+    <div id="output"></div>
+
+    <script>
+        // Constructor function
+        function Person(name, age) {
+            this.name = name;
+            this.age = age;
+        }
+
+        // Adding a method using prototype
+        Person.prototype.sayHello = function () {
+            return `Hello, my name is ${this.name} and I am ${this.age} years old.`;
+        };
+
+        // Creating instances of Person
+        let person1 = new Person('Naresh', 23);
+        let person2 = new Person('Unknown', 32);
+
+        // Displaying the output on the HTML page
+        document.getElementById('output').innerHTML = `<p>${person1.sayHello()}</p>
+                                                        <p>${person2.sayHello()}</p>`;
+    </script>
+</body>
+
+</html>
