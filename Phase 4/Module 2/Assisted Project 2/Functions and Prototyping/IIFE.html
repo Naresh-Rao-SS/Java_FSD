@@ -25,6 +25,56 @@
         })('Naresh');
 
 
+        // Function that performs an operation and calls back a provided function
+        function performOperation(x, y, callback) {
+            // Perform the operation and call back the provided function with the result
+            callback(x + y);
+        }
+
+        // Callback function
+        function displayResult(sum) {
+            console.log('The result is:', sum);
+        }
+
+        // Call the performOperation function with the callback
+        performOperation(5, 10, displayResult);
+
+
+        // IIFE (Immediately Invoked Function Expression)
+        (function () {
+            var message = "IIFE function";
+            console.log(message);
+        })();
+
+        // Callback function
+        function sayHello(callback) {
+            var name = "Callback function";
+            callback(name);
+        }
+
+        // Closure
+        function createCounter() {
+            var count = 0;
+
+            function increment() {
+                count++;
+                console.log("closure function with counter " + count);
+            }
+
+            return increment;
+        }
+
+        // Example usage
+        sayHello(function (name) {
+            console.log(name + "!");
+        });
+
+        var counter = createCounter();
+        counter();
+        counter();
+        counter();
+
+
     </script>
 </body>
 

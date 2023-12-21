@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Example</title>
+</head>
+
+<body>
+    <h1>Basic Example</h1>
+
+    <div id="output"></div>
+
+    <script>
+        // Map example
+        console.log("Map Example!");
+        var myMap = new Map();
+
+        myMap.set("name", "John");
+        myMap.set("age", 30);
+        myMap.set("city", "New York");
+
+        console.log(myMap.get("name"));
+        console.log(myMap.get("age"));
+        console.log(myMap.get("city"));
+
+        // Checking if a key exists in the map
+        console.log(myMap.has("name"));
+        console.log(myMap.has("gender"));
+
+        myMap.delete("age");
+
+        //removing the myMap
+        myMap.clear();
+
+        // Class example
+        class Person {
+            constructor(name, age) {
+                this.name = name;
+                this.age = age;
+            }
+
+            greet() {
+                console.log("Hello, my name is " + this.name + " and I am " + this.age + " years old.");
+            }
+        }
+
+        console.log("Class Example!");
+        var person1 = new Person("John", 30);
+        var person2 = new Person("Jane", 25);
+
+        // Accessing properties and calling methods
+        console.log(person1.name);
+        console.log(person2.age);
+        person1.greet();
+        person2.greet();
+
+
+
+    </script>
+</body>
+
+</html>
