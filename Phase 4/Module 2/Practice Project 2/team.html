@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Team Budget Planner</title>
+    <style>
+        body {
+            padding: 20px;
+            background-color: black;
+        }
+
+        .list-group-item {
+            background-color: #000000;
+
+            color: white;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container text-white">
+        <div class="row">
+            <div class="col-md-8">
+                <h2 class="mt-4 mb-4">Team Budget Planner</h2>
+            </div>
+            <div class="col-md-4 text-right">
+                <a href="index.html" class="btn btn-dark">Home</a>
+                <a href="contact.html" class="btn btn-primary">Contact Us</a>
+            </div>
+        </div>
+
+        <form id="budgetForm">
+            <div class="form-group">
+                <label for="teamMember">Team Member</label>
+                <input type="text" class="form-control" id="teamMember" placeholder="Enter team member's name" required>
+            </div>
+            <div class="form-group">
+                <label for="budget">Budget Allocation (₹)</label>
+                <input type="number" class="form-control" id="budget" placeholder="Enter budget" required>
+            </div>
+            <button type="button" class="btn btn-primary" onclick="addBudget()">Add Budget</button>
+        </form>
+        <hr>
+        <h4>Team Budget Summary</h4>
+        <ul id="budgetList" class="list-group mb-4"> </ul>
+
+        <div class="alert alert-info" role="alert" id="totalBudget">Total Budget: ₹0</div>
+    </div>
+
+    <script>
+        let totalBudget = 0;
+
+        function addBudget() {
+            const teamMemberInput = document.getElementById('teamMember');
+            const budgetInput = document.getElementById('budget');
+            const budgetList = document.getElementById('budgetList');
+            const totalBudgetElement = document.getElementById('totalBudget');
+
+            const teamMember = teamMemberInput.value;
+            const budget = parseFloat(budgetInput.value);
+
+            if (isNaN(budget) || budget <= 0) {
+                alert('Please enter a valid budget.');
+                return;
+            }
+
+            // Create list item
+            const listItem = document.createElement('li');
+            listItem.className = 'list-group-item';
+            listItem.textContent = `${teamMember}: $${budget.toFixed(2)}`;
+            budgetList.appendChild(listItem);
+
+            // Update total budget
+            totalBudget += budget;
+            totalBudgetElement.textContent = `Total Budget: $${totalBudget.toFixed(2)}`;
+
+            // Clear input fields
+            teamMemberInput.value = '';
+            budgetInput.value = '';
+        }
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
