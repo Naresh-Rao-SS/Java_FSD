@@ -1,0 +1,24 @@
+<div class="container">
+  <h2>Form Validation</h2>
+  <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input
+        type="text"
+        id="name"
+        formControlName="name"
+        class="form-control"
+      />
+      <div
+        *ngIf="
+          myForm.get('name')?.hasError('required') &&
+          (myForm.get('name')?.dirty || myForm.get('name')?.touched)
+        "
+      >
+        <p>Name is required.</p>
+      </div>
+    </div>
+
+    <button type="submit" [disabled]="myForm.invalid">Submit</button>
+  </form>
+</div>

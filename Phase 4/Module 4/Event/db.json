@@ -1,0 +1,28 @@
+{
+  "employees": [
+    {
+      "first_name": "NARESH RAO",
+      "last_name": "SS",
+      "email": "naresh@gmail.com",
+      "id": 1
+    },
+    {
+      "first_name": "VIRAT ",
+      "last_name": "KOHLI",
+      "email": "virat@gmail.com",
+      "id": 2
+    },
+    {
+      "first_name": "CRISTIANO",
+      "last_name": "RONALDO",
+      "email": "ronaldo@gmail.com",
+      "id": 3
+    },
+    {
+      "first_name": "TOM",
+      "last_name": "CRUISE",
+      "email": "tom@gmail.com",
+      "id": 4
+    }
+  ]
+}

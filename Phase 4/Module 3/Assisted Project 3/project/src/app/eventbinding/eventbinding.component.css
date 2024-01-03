@@ -1,0 +1,25 @@
+/* increment-decrement.component.css */
+.container {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.container-button {
+  padding: 20px 40px;
+  font-size: 20px;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  margin: 10px;
+}
+
+button {
+  padding: 15px 30px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  background-color: orangered;
+  border-radius: 5px;
+  margin: 10px;
+}

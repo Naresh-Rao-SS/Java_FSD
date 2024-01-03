@@ -1,0 +1,17 @@
+<h1>Pipes</h1>
+
+<h4>Date Pipe</h4>
+<p>Current Date: {{ currentDate | date }}</p>
+<p>Custom Formatted Date: {{ currentDate | date : "medium" }}</p>
+
+<h4>Number Pipe</h4>
+<p>Original Number: {{ originalNumber }}</p>
+<p>Formatted Number: {{ originalNumber | number : "1.2-2" }}</p>
+
+<h4>UpperCase and LowerCase Pipes</h4>
+<p>Original Text: {{ originalText }}</p>
+<p>UpperCase Text: {{ originalText | uppercase }}</p>
+<p>LowerCase Text: {{ originalText | lowercase }}</p>
+
+<h4>Slice Pipe</h4>
+<p>Sliced Text: {{ originalText | slice : 0 : 5 }}</p>

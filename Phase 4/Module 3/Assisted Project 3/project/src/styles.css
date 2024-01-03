@@ -1,0 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit&family=Nunito+Sans:opsz,wght@6..12,700&display=swap");
+
+body {
+  background-color: black;
+  color: whitesmoke;
+  font-family: "Nunito Sans", "Kanit";
+}
+
+h1 {
+  text-align: center;
+}

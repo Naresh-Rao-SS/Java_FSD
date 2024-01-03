@@ -1,0 +1,18 @@
+<h1>String , Class And Property Style Binding</h1>
+
+<p>String Interpolation</p>
+<div class="container">
+  <div>{{ heading }}</div>
+</div>
+
+<p>Class</p>
+<div [class]="isactive ? 'active' : 'inactive'">
+  This has 2 classes active and inactive and takes a boolean values from ts
+</div>
+
+<p>Property</p>
+<div class="container">
+  This is Text hidden can toggel it in ts<input type="text" hidden />
+  <br />
+  <button disabled>submit</button>
+</div>
