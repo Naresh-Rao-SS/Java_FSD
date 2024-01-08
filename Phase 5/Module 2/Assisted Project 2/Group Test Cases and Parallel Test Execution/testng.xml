@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="ParallelTestSuite" parallel="methods" thread-count="2">
+    <test name="GoogleProductsTest">
+        <groups>
+            <run>
+                <include name="GoogleProducts" />
+            </run>
+        </groups>
+        <classes>
+            <class name="ParallelTestExecutionExample" />
+        </classes>
+    </test>
+    <test name="EcommerceTest">
+        <groups>
+            <run>
+                <include name="Ecommerce" />
+            </run>
+        </groups>
+        <classes>
+            <class name="ParallelTestExecutionExample" />
+        </classes>
+    </test>
+</suite>
